@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/id_voltar"
+        android:enabled="false"
+        android:icon="?attr/actionModeCloseDrawable"
+        android:title="Voltar"
+        android:visible="false" />
+    <item
+        android:id="@+id/id_buscar"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Buscar"
+        app:showAsAction="always"
+        app:actionViewClass="android.widget.SearchView" />
+    <item
+        android:id="@+id/id_compartilhar"
+        android:checkable="false"
+        android:icon="?android:attr/actionModeShareDrawable"
+        android:title="Compartilhar"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/id_adicionar"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="Item"
+        app:showAsAction="always" />
+</menu>
