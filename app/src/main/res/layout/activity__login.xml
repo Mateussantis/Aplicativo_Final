@@ -4,44 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_Login">
-
-    <Button
-        android:id="@+id/botao_voltar"
-        android:layout_width="206dp"
-        android:layout_height="wrap_content"
-        android:text="Voltar"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="231dp" />
-
-    <TextView
-        android:id="@+id/usuario_Login"
-        android:layout_width="1dp"
-        android:layout_height="wrap_content"
-        android:text="Usuario"
-        tools:text="Usuario" />
-
-    <Button
-        android:id="@+id/botao_matematica"
+    tools:context=".ActivityLogin"
+    >
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Matematica"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="70dp" />
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="335dp">
 
-    <Button
-        android:id="@+id/botao_geografia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Geografia"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="69dp" />
+        <Button
+            android:id="@+id/botao_voltar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="91dp"
+            android:text="Voltar"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="231dp" />
 
-    <Button
-        android:id="@+id/botao_historia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Historia"
-        tools:layout_editor_absoluteX="270dp"
-        tools:layout_editor_absoluteY="70dp" />
+        <Button
+            android:id="@+id/botao_matematica"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="46dp"
+            android:text="Matematica"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="70dp" />
+
+        <Button
+            android:id="@+id/botao_geografia"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="210dp"
+            android:text="Geografia"
+            tools:layout_editor_absoluteX="136dp"
+            tools:layout_editor_absoluteY="69dp" />
+
+        <Button
+            android:id="@+id/botao_historia"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="130dp"
+            android:text="Historia"
+            tools:layout_editor_absoluteX="270dp"
+            tools:layout_editor_absoluteY="70dp" />
+
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

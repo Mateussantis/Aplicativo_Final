@@ -3,23 +3,36 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
 
-    <EditText
-        android:id="@+id/id_num"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Digite um numero"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="78dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="16dp">
 
-    <Button
-        android:id="@+id/botao_soma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Digite o Numero"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="171dp" />
+        <EditText
+            android:id="@+id/id_num"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Digite um numero"
+            android:inputType="textPersonName"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="143dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <Button
+            android:id="@+id/botao_soma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Enviar"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="110dp"
+            tools:layout_editor_absoluteY="171dp" />
+
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

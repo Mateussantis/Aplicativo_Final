@@ -19,17 +19,20 @@ open class MainActivity : AppCompatActivity() {
 
     //Função que cuidara de tratar o clique no botao
     fun cliqueBotao(){
+
         //Criando uma variavel que recebera o id do EditText, o valor digitado
         var nome = string_Usuario_Email.text.toString()
         var senha = espaco_Senha.text.toString()
 
         //Criando uma varivel que recebera a intencao do click botao
-        var intent = Intent(this, Activity_Login::class.java)
+        var intent = Intent(this, ActivityLogin::class.java)
 
         //Criando uma variavel que recebera os valores, e podera leva-la para outra tela
         var result = Bundle()
+
         //Indicando que essa variavel recebera tera a chave nome, e recebera o nome do usuario digitado
         result.putString("nome", nome)
+
         //Levando os parametros(Valores digitados) para outra tela
         intent.putExtras(result)
 

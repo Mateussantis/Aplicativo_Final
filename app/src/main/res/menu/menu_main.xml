@@ -25,4 +25,9 @@
         android:icon="@android:drawable/ic_menu_add"
         android:title="Item"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/id_configuracoes"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="Configuraões"
+        app:showAsAction="never" />
 </menu>

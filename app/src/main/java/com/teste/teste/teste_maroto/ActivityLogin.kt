@@ -2,24 +2,25 @@ package com.teste.teste.teste_maroto
 
 import android.app.Activity
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
 import android.widget.SearchView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity__login.*
 
-open class Activity_Login : MainActivity() {
+open class ActivityLogin : MainActivity() {
 
     var nome:String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity__login)
+
         //Colocando o valor da action bar como verdadeiro, para inicar ela
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         //Esse titulo para a action bar é OBRIGATORIO
         supportActionBar?.title = "Segunda Tela"
 
@@ -30,8 +31,10 @@ open class Activity_Login : MainActivity() {
 
         //Variavel que recebe os dados acoplados ao bundle "Result"
         val args = intent.extras
+
         //Variavel que recebe a chave nome, com os dados do nome
         nome = args.getString("nome")
+
         //Retornando informacao para saber que os dados foram enviados com sucesso
         Toast.makeText(this, "Voce enviou o parametro $nome", Toast.LENGTH_SHORT).show()
     }
@@ -86,8 +89,11 @@ open class Activity_Login : MainActivity() {
             Toast.makeText(this, "Clicou no botão voltar $nome", Toast.LENGTH_SHORT).show()
             finish()
         } else if (id == R.id.id_adicionar){
-            val intent = Intent(this, Activty_adicionar::class.java)
-            startActivityForResult(intent, 2)
+            val add = Intent(this, ActivtyAdicionar::class.java)
+            startActivityForResult(add, 2)
+        } else if (id == R.id.id_configuracoes){
+            val config = Intent(this, ActivityConfig::class.java)
+            startActivity(config)
         }
         return super.onOptionsItemSelected(item)
     }
