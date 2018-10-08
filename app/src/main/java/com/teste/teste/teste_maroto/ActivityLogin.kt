@@ -1,15 +1,67 @@
 package com.teste.teste.teste_maroto
 
+import android.app.ActionBar
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.support.design.widget.NavigationView
+import android.support.v4.view.GravityCompat
+import android.support.v4.widget.DrawerLayout
+import android.support.v7.app.ActionBarDrawerToggle
+import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import android.widget.SearchView
 import android.widget.Toast
+import android.widget.ToggleButton
+import com.teste.teste.teste_maroto.R.string.drawer_abrir
+import com.teste.teste.teste_maroto.R.string.drawer_fechar
 import kotlinx.android.synthetic.main.activity__login.*
 
-open class ActivityLogin : MainActivity() {
+open class  ActivityLogin : MainActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.nav_disciplina->{
+                val nav = Intent(this, ActivityNav::class.java)
+                startActivity(nav)
+            }
+            R.id.config_disciplina->{
+                val con = Intent(this, ActivityConfig::class.java)
+                startActivity(con)
+            }
+            R.id.forum_disciplina->{
+                val forum = Intent(this, ActivityNav::class.java)
+                startActivity(forum)
+            }
+            R.id.localizar_disciplina->{
+                val localiza = Intent(this, ActivityLocalizar::class.java)
+                startActivity(localiza)
+            }
+            R.id.msg_disciplina->{
+                val chats = Intent(this, ActivityChat::class.java)
+                startActivity(chats)
+            }
+        }
+        layoutMenuLateral.closeDrawer(GravityCompat.START)
+        return true
+    }
+
+    //Teria que receber uma toolbar, nao uma  ActionBar... Nao consegui fazer o botao aparecer, MAS é possivel puxar o menu arrastando a tela
+
+   /* fun configuraMenuLateral(){
+        val actionBar = actionBar
+        val layoutMenuLateral = layoutMenuLateral
+
+        var toggle = ActionBarDrawerToggle(this, layoutMenuLateral, actionBar, R.string.drawer_abrir, R.string.drawer_fechar)
+        layoutMenuLateral.addDrawerListener(toggle)
+        toggle.syncState()
+
+        val navegationView = menu_tela_inicial
+        navegationView.setNavigationItemSelectedListener(this)
+
+    } */
 
     var nome:String? = null
 
@@ -37,6 +89,8 @@ open class ActivityLogin : MainActivity() {
 
         //Retornando informacao para saber que os dados foram enviados com sucesso
         Toast.makeText(this, "Voce enviou o parametro $nome", Toast.LENGTH_SHORT).show()
+
+        //configuraMenuLateral()
     }
 
     fun matematica(){
@@ -104,6 +158,7 @@ open class ActivityLogin : MainActivity() {
     }
 
     }
+
 
 
 

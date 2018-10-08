@@ -18,6 +18,11 @@
         <activity android:name=".ActivityLogin" />
         <activity android:name=".ActivityConfig" />
         <activity android:name=".ActivtyAdicionar"/>
+        <activity android:name=".ActivityChat"/>
+        <activity android:name=".ActivityForum"/>
+        <activity android:name=".ActivityLocalizar"/>
+        <activity android:name=".ActivityNav"/>
+
     </application>
 
 </manifest>

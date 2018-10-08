@@ -6,4 +6,6 @@
     <string name="email_ou_usuario">Email Ou Usuario</string>
     <string name="senha">Senha:</string>
     <string name="name">Name</string>
+    <string name="drawer_abrir">Aberto</string>
+    <string name="drawer_fechar">Fechado</string>
 </resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/nav_disciplina"
+            android:icon="@drawable/ic_disciplina_black"
+            android:title="Disciplinas"
+            />
+        <item android:id="@+id/forum_disciplina"
+            android:icon="@drawable/ic_forum_black"
+            android:title="Forum"
+            />
+        <item android:id="@+id/msg_disciplina"
+            android:icon="@drawable/ic_chat_black"
+            android:title="Chat"
+            />
+        <item android:id="@+id/localizar_disciplina"
+            android:icon="@drawable/ic_local_black"
+            android:title="Localização"
+            />
+        <item android:id="@+id/config_disciplina"
+            android:icon="@drawable/ic_configuracoes_black"
+            android:title="Configurações"
+            />
+    </group>
+
+</menu>
